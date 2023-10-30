@@ -1,14 +1,12 @@
 import React from "react";
 import { Content } from "antd/es/layout/layout";
-import { Button, Row } from "antd";
+import { Row } from "antd";
 import GridCard from "../../commons/GridCard";
-import Filter from "./Filetr";
+import Filter from "./Filter";
 import SearchInput from "./SearchInput";
+import MoreItem from "../../commons/MoreItem";
 
 const LandingPage = () => {
-  // 더보기 버튼 누르면 식당 목록 더 표시하는 기능.
-  const loadMoreItems = () => {};
-
   return (
     <div>
       <Content
@@ -43,7 +41,7 @@ const LandingPage = () => {
             margin: "20px",
           }}
         >
-          <Button onClick={loadMoreItems}>더보기</Button>
+          <MoreItem></MoreItem>
         </div>
       </Content>
     </div>

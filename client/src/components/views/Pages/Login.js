@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Checkbox, Form, Input } from "antd";
+
 const onFinish = (values) => {
   console.log("Success:", values);
 };
@@ -77,6 +78,8 @@ const Login = () => (
 
       <div>
         <a href="/signup">회원이 아니신가요?</a>
+        <br></br>
+        {/* <a href="/#!">비밀번호를 잊어버리셨나요?</a> */}
       </div>
     </Form.Item>
   </Form>

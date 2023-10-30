@@ -63,6 +63,19 @@ const SignUp = () => {
       >
         <Input />
       </Form.Item>
+      
+      <Form.Item
+        name="name"
+        label="name"
+        rules={[
+          {
+            required: true,
+            message: "이름을 입력하세요",
+          },
+        ]}
+      >
+        <Input />
+      </Form.Item>
 
       <Form.Item
         name="password"
@@ -119,6 +132,7 @@ const SignUp = () => {
           }}
         />
       </Form.Item>
+      
 
       <Form.Item
         name="agreement"
