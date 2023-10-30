@@ -3,11 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Layout } from "antd";
 import NavBar from "./views/NavBar/NavBar";
 import Footer from "./views/Footer/Footer";
-import LandingPage from "./views/LandingPage";
-import Login from "./views/Login";
-import StoreDetail from "./views/StoreDetail.js/StoreDetail";
-import UserInfo from "./views/UserInfo/UserInfo";
-import SignUp from "./views/SignUp";
+import LandingPage from "./views/Pages/LandingPage/LandingPage";
+import Login from "./views/Pages/Login";
+import StoreDetail from "./views/Pages/StoreDetail.js/StoreDetail";
+import UserInfo from "./views/Pages/UserInfo/UserInfo";
+import SignUp from "./views/Pages/SignUp";
 
 const App = () => {
   return (

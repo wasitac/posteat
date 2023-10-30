@@ -1,7 +1,6 @@
 import React from "react";
 import { Layout, Menu } from "antd";
 import Login from "./LoginButton";
-import SearchInput from "./SearchInput";
 import { useParams } from "react-router";
 const { Header } = Layout;
 
@@ -33,7 +32,6 @@ function NavBar() {
           defaultSelectedKeys={["가게"]}
           items={items}
         />
-        <SearchInput></SearchInput>
         <Login />
       </Header>
     </div>

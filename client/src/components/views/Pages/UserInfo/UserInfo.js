@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Avatar, Card, Row } from "antd";
-import GridCard from "../commons/GridCard";
-import { UserOutlined } from "@ant-design/icons";
+import GridCard from "../../commons/GridCard";
+import { UserOutlined, SettingOutlined } from "@ant-design/icons";
 
 const tabList = [
   {
@@ -16,7 +16,12 @@ const tabList = [
     key: "following",
     label: "following",
   },
+  {
+    key: "setting",
+    label: <SettingOutlined style={{ fontSize: "18px"}} />,
+  },
 ];
+
 const contentList = {
   dibs: (
     <Row gutter={[10, 10]}>
@@ -63,6 +68,10 @@ const contentList = {
       })}
     </Row>
   ),
+  setting: (
+    <>
+    </>
+  ),
 };
 
 const UserInfo = () => {
@@ -72,20 +81,29 @@ const UserInfo = () => {
   };
 
   return (
-    <div style={{ width: "55%", margin: "0 auto", paddingTop: 30 }}>
-      <Card
-        style={{
-          width: "100%",
-          // marginTop: "30px",
-        }}
-        cover={
-          <div style={{ textAlign: "center", marginTop: "30px" }}>
-            <Avatar size={200} icon={<UserOutlined />} />
-            <h2>name</h2>
-          </div>
-        }
-        actions={[<div>follower</div>, <div>following</div>, <div>dibs</div>]}
-      ></Card>
+    <div
+      style={{
+        width: "65%",
+        minWidth: "430px",
+        margin: "0 auto",
+        paddingTop: 30,
+      }}
+    >
+      <div>
+        <Card
+          style={{
+            width: "100%",
+            // marginTop: "30px",
+          }}
+          cover={
+            <div style={{ textAlign: "center", marginTop: "30px" }}>
+              <Avatar size={200} icon={<UserOutlined />} />
+              <h2>name</h2>
+            </div>
+          }
+          actions={["follower", "following", "dibs"]}
+        ></Card>
+      </div>
       <Card
         style={{
           width: "100%",

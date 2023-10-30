@@ -9,13 +9,20 @@ const StoreDetail = () => {
 
   return (
     <>
-      <div style={{ width: "70%", backgroundColor: "#eee", margin: "20px auto", padding: "10px"}}>
+      <div
+        style={{
+          width: "90%",
+          maxWidth: "800px",
+          backgroundColor: "#eee",
+          margin: "20px auto",
+          padding: "10px",
+        }}
+      >
         <StoreInfo storeId={storeId}></StoreInfo>
         <hr />
         <StoreMenu storeId={storeId} />
         <hr />
         <ReviewForm></ReviewForm>
-        
       </div>
     </>
   );

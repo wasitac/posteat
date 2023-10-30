@@ -1,12 +1,7 @@
 import React from "react";
 import { Avatar, Card, Col } from "antd";
 import img from "../../../img/food.jpg";
-import {
-  EditOutlined,
-  EllipsisOutlined,
-  SettingOutlined,
-  UserOutlined,
-} from "@ant-design/icons";
+import { UserOutlined } from "@ant-design/icons";
 import DibsButton from "./DibsButton";
 const { Meta } = Card;
 
@@ -39,15 +34,15 @@ const GridCard = (props) => {
             hoverable
             style={{
               width: "100%",
+              backgroundImage: `url(${img})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
             }}
-            actions={[
-              <SettingOutlined key="setting" />,
-              <EditOutlined key="edit" />,
-              <EllipsisOutlined key="ellipsis" />,
-            ]}
           >
-            <Meta title={props.storeName} description="내가 남긴 리뷰" />
-            <span>내가 남긴 별점 </span>
+            <div style={{ backgroundColor: "#eeec", padding: "15px"}}>
+              <Meta title={props.storeName} description="내가 남긴 리뷰" />
+              <span>내가 남긴 별점 </span>
+            </div>
           </Card>
         </a>
       </Col>
@@ -63,7 +58,7 @@ const GridCard = (props) => {
           }}
           cover={
             <div style={{ marginTop: "10px" }}>
-              <Avatar size={100} icon={<UserOutlined />} />
+              <Avatar size={80} icon={<UserOutlined />} />
               <h2>name</h2>
             </div>
           }
