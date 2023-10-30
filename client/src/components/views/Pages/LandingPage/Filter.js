@@ -1,13 +1,20 @@
 import React from "react";
 import { Select } from "antd";
 
-const options = [];
-for (let i = 10; i < 36; i++) {
-  options.push({
-    value: i.toString(36) + i,
-    label: i.toString(36) + i,
-  });
-}
+const options = [
+  {
+    value: 1,
+    label: "한식",
+  },
+  {
+    value: 2,
+    label: "일식",
+  },
+  {
+    value: 3,
+    label: "중식",
+  },
+];
 const handleChange = (value) => {
   console.log(`selected ${value}`);
 };
@@ -53,7 +60,6 @@ const Filter = () => (
         },
       ]}
     />
-    
   </div>
 );
 export default Filter;

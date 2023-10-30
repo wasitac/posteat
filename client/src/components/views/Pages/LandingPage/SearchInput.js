@@ -12,7 +12,7 @@ const SearchInput = () => (
       style={{
         display: "block",
         width: "80%",
-        margin: "100px auto",
+        margin: "60px auto",
       }}
     />
   </div>

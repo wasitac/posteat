@@ -16,7 +16,7 @@ const App = () => {
       <div style={{ minHeight: "calc(100vh - 64px)" }}>
         <Router>
           <Routes>
-            <Route path="/" element={<LandingPage />} />
+            <Route path="/posteat" element={<LandingPage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/store/:storeId" element={<StoreDetail />} />
             <Route path="/userinfo/:userId" element={<UserInfo />} />

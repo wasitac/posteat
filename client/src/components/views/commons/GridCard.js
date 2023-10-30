@@ -39,7 +39,7 @@ const GridCard = (props) => {
               backgroundSize: "cover",
             }}
           >
-            <div style={{ backgroundColor: "#eeec", padding: "15px"}}>
+            <div style={{ backgroundColor: "#eeec", padding: "15px" }}>
               <Meta title={props.storeName} description="내가 남긴 리뷰" />
               <span>내가 남긴 별점 </span>
             </div>
@@ -50,19 +50,22 @@ const GridCard = (props) => {
   } else if (props.UserProfile) {
     return (
       <Col xs={6}>
-        <Card
-          style={{
-            width: "100%",
-            textAlign: "center",
-            height: "160px",
-          }}
-          cover={
-            <div style={{ marginTop: "10px" }}>
-              <Avatar size={80} icon={<UserOutlined />} />
-              <h2>name</h2>
-            </div>
-          }
-        ></Card>
+          {/* 다른유저의 정보창으로 이동. */}
+        <a href="/userinfo/undefined">
+          <Card
+            style={{
+              width: "100%",
+              textAlign: "center",
+              height: "160px",
+            }}
+            cover={
+              <div style={{ marginTop: "10px" }}>
+                <Avatar size={80} icon={<UserOutlined />} />
+                <h2>name</h2>
+              </div>
+            }
+          ></Card>
+        </a>
       </Col>
     );
   }

@@ -1,7 +1,16 @@
 import React, { useState } from "react";
-import { Avatar, Card, Row } from "antd";
+import { Avatar, Button, Card, Col, Row, Statistic } from "antd";
 import GridCard from "../../commons/GridCard";
-import { UserOutlined, SettingOutlined } from "@ant-design/icons";
+import { UserOutlined, SettingOutlined, LikeOutlined } from "@ant-design/icons";
+
+const confirmQuit = () => {
+  if (window.confirm("정말 탈퇴하시겠습니까?")) {
+    var nameToQuit = window.prompt(
+      "이름을 입력하고 확인을누르면 탈퇴가 완료됩니다."
+    );
+    // 이름을 비교하고 탈퇴 진행
+  }
+};
 
 const tabList = [
   {
@@ -18,7 +27,7 @@ const tabList = [
   },
   {
     key: "setting",
-    label: <SettingOutlined style={{ fontSize: "18px"}} />,
+    label: <SettingOutlined style={{ fontSize: "18px" }} />,
   },
 ];
 
@@ -30,7 +39,6 @@ const contentList = {
           <GridCard
             UserDibStores
             storeId={index + 1}
-            // storePicturePath=
             storeName={`storename ${index + 1}`}
             key={index + 1}
           />
@@ -45,7 +53,6 @@ const contentList = {
           <GridCard
             UserProfile
             storeId={index + 1}
-            // storePicturePath=
             storeName={`storename ${index + 1}`}
             key={index + 1}
           />
@@ -60,7 +67,6 @@ const contentList = {
           <GridCard
             UserProfile
             storeId={index + 1}
-            // storePicturePath=
             storeName={`storename ${index + 1}`}
             key={index + 1}
           />
@@ -68,8 +74,13 @@ const contentList = {
       })}
     </Row>
   ),
+  //
   setting: (
     <>
+      
+      <Button type="primary" danger onClick={confirmQuit}>
+        탈퇴하기
+      </Button>
     </>
   ),
 };
@@ -101,8 +112,23 @@ const UserInfo = () => {
               <h2>name</h2>
             </div>
           }
-          actions={["follower", "following", "dibs"]}
-        ></Card>
+        >
+          <Row
+            style={{
+              marginLeft: "50px",
+            }}
+          >
+            <Col span={8}>
+              <Statistic title="dibs" value={1128} prefix={<LikeOutlined />} />
+            </Col>
+            <Col span={8}>
+              <Statistic title="follower" value={1128} />
+            </Col>
+            <Col span={8}>
+              <Statistic title="following" value={93} />
+            </Col>
+          </Row>
+        </Card>
       </div>
       <Card
         style={{
@@ -117,6 +143,15 @@ const UserInfo = () => {
         }}
       >
         {contentList[activeTabKey]}
+        <div
+          style={{
+            textAlign: "center",
+            display: "inlineBlock",
+            margin: "20px",
+          }}
+        >
+          <Button>더보기</Button>
+        </div>
       </Card>
     </div>
   );
