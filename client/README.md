@@ -11,7 +11,7 @@
 - Userinfo : 유저의 활동 및 개인정보 수정/탈퇴
 
 - Login
-- - SignUp
+ - SignUp
 
 ---
 
