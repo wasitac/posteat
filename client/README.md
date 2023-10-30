@@ -4,31 +4,14 @@
 
 - 사이트맵
 
+- LandingPage : 메인 페이지. 검색 및 필터링을 통한 식당 검색
 
-LandingPage 메인 페이지. 검색 및 필터링을 통한 식당 검색
+- StoreDetail : 장소의 상세 정보 및 유저의 리뷰작성
+ 
+- Userinfo : 유저의 활동 및 개인정보 수정/탈퇴
 
-│
-
-├─StoreDetail 장소의 상세 정보 및 유저의 리뷰작성
-
-│  
-
-
-├─Userinfo 유저의 활동 및 개인정보 수정/탈퇴
-
-
-
-│
-
-
-
-└─Login
-
-
-
-└─SignUp
-
-
+- Login
+-- SignUp
 
 ---
 
