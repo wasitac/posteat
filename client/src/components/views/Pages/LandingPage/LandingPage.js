@@ -1,7 +1,7 @@
 import React from "react";
 import Filter from "./Filter";
 import SearchInput from "./SearchInput";
-import LoadItem from "../../commons/MoreItem";
+import GridCard from "../../commons/GridCard";
 
 const LandingPage = () => {
   return (
@@ -11,7 +11,7 @@ const LandingPage = () => {
       <h2>식당 리스트</h2>
       <hr />
       <Filter />
-      <LoadItem LandingPage></LoadItem>
+      <GridCard type='LandingPage' />
     </div>
   );
 };
