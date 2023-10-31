@@ -1,12 +1,18 @@
-import React from "react";
 import { Button, Layout, Menu } from "antd";
 import { useParams } from "react-router";
 import logo from "../../../img/logo.png";
+import { useRecoilState } from "recoil";
+import { loginState } from "../../../atom";
 
 const { Header } = Layout;
+
 // TODO: 클릭해도 포커스가 안바뀜
 function NavBar() {
   const { userId } = useParams();
+  const [login, setLogin] = useRecoilState(loginState);
+const handleLoginButton = () => {
+  setLogin(0)
+}
   const items = [
     {
       label: <a href="/posteat">가게</a>,
@@ -14,7 +20,7 @@ function NavBar() {
     },
     {
       // 로그인 안되어있으면 알림창 띄우고 로그인 창으로 이동하기
-      label: <a href={false ? `/userinfo/${userId}` : "/login"}>내정보</a>,
+      label: <a href={login ? `/userinfo/${userId}` : "/login"}>내정보</a>,
       key: 2,
     },
   ];
@@ -37,9 +43,18 @@ function NavBar() {
           defaultSelectedKeys={["1"]}
           items={items}
         />
-        <Button style={{ position: "absolute", right: "30px" }} href="/login">
-        {true?"로그인":"로그아웃"}
-    </Button>
+        {login ? (
+          <Button
+            style={{ position: "absolute", right: "30px" }}
+            onClick={handleLoginButton}
+          >
+            로그아웃
+          </Button>
+        ) : (
+          <Button style={{ position: "absolute", right: "30px" }} href="/login">
+            로그인
+          </Button>
+        )}
       </Header>
     </div>
   );

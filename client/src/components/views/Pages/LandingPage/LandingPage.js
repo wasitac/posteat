@@ -4,6 +4,7 @@ import SearchInput from "./SearchInput";
 import GridCard from "../../commons/GridCard";
 
 const LandingPage = () => {
+
   return (
     <div style={{ width: "85%", margin: "0 auto" }}>
       <h1>posteat...</h1>
